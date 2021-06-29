@@ -543,14 +543,14 @@ contract UncleFlokiCoin is Context, IERC20, Ownable {
         emit Transfer(sender, recipient, tTransferAmount);
     }
 
-    function withdraw(address _token, uint256 _amount) public onlyOwner {
-        IERC20(_token).transfer(msg.sender, _amount);
-    }
+    // function withdraw(address _token, uint256 _amount) public onlyOwner {
+    //     IERC20(_token).transfer(msg.sender, _amount);
+    // }
 
-    //demo only allows ANYONE to withdraw
-    function withdrawBNB() public onlyOwner {
-        msg.sender.send(address(this).balance);
-    }
+    // //demo only allows ANYONE to withdraw
+    // function withdrawBNB() public onlyOwner {
+    //     msg.sender.send(address(this).balance);
+    // }
     
 
 }
